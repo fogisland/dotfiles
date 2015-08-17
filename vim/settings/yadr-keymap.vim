@@ -214,6 +214,9 @@ vnoremap > >gv
 nnoremap j gj
 nnoremap k gk
 
+"CtrlP 
+map <leader>t :CtrlP<CR>
+
 inoremap <expr> <c-j> pumvisible() ? "\<C-e>\<Down>" : "\<Down>"
 inoremap <expr> <c-k> pumvisible() ? "\<C-e>\<Up>" : "\<Up>"
 
