@@ -184,10 +184,10 @@ map ,hi :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
 " ,hp = html preview
 map <silent> ,hp :!open -a Safari %<CR><CR>
 
-"imap uu _
-"imap hh =>
-"imap kk ->
-"imap aa @
+" imap uu _
+" imap hh =>
+" imap kk ->
+" imap aa @
 
 nnoremap <C-t>n :tabnew<CR>
 nnoremap <silent> <Leader>w= :wincmd =<CR>
