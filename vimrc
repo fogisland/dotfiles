@@ -66,6 +66,7 @@ set softtabstop=2
 set tabstop=2
 set expandtab
 
+filetype on
 filetype plugin on
 filetype indent on
 
