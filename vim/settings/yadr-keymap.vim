@@ -102,6 +102,5 @@ cnoremap <C-l> <RIGHT>
 
 map <leader>ww :w<CR>
 map <leader>wa :wall<CR>
-map <leader>xx :x<CR>
 
 nnoremap <Leader>sw :set wrap! wrap?<CR>
