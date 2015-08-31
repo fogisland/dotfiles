@@ -59,10 +59,10 @@ vmap ,{ c{<C-R>"}<ESC>
 map ,` ysiw`
 
 " gary bernhardt's hashrocket
-imap <c-l> <space>=><space>
+" imap <c-l> <space>=><space>
 
 "Go to last edit location with ,.
-nnoremap ,. '.
+" nnoremap ,. '.
 
 "When typing a string, your quotes auto complete. Move past the quote
 "while still in insert mode by hitting Ctrl-a. Example:
@@ -93,28 +93,13 @@ cnoremap <C-d> <DELETE>
 " ,q to toggle quickfix window (where you have stuff like Ag)
 " ,oq to open it back up (rare)
 " instead, use ListToggle
-nmap <silent> ,qc :cclose<CR>
-nmap <silent> ,qo :copen<CR>
+" nmap <silent> ,qc :cclose<CR>
+" nmap <silent> ,qo :copen<CR>
 
 "Move back and forth through previous and next buffers
 "with ,z and ,x
 nnoremap <silent> ,z :bp<CR>
 nnoremap <silent> ,x :bn<CR>
-
-" ==============================
-" Window/Tab/Split Manipulation
-" ==============================
-" Move between split windows by using the four directions H, L, K, J
-" NOTE: This has moved to vim/settings/vim-tmux-navigator.vim.
-" nnoremap <silent> <C-h> <C-w>h
-" nnoremap <silent> <C-l> <C-w>l
-" nnoremap <silent> <C-k> <C-w>k
-" nnoremap <silent> <C-j> <C-w>j
-
-" Make gf (go to file) create the file, if not existent
-nnoremap gf :e<cfile><CR>
-nnoremap <C-w>f :sp +e<cfile><CR>
-nnoremap <C-w>gf :tabe<cfile><CR>
 
 " Zoom in
 map <silent> ,gz <C-w>o
@@ -149,54 +134,33 @@ nnoremap <silent> ,cn :let @* = expand("%:t")<CR>
 nmap <silent> // :nohlsearch<CR>
 
 "(v)im (c)ommand - execute current line as a vim command
-nmap <silent> ,vc yy:<C-f>p<C-c><CR>
+" nmap <silent> ,vc yy:<C-f>p<C-c><CR>
 
 "(v)im (r)eload
-nmap <silent> ,vr :so %<CR>
-
-" Type ,hl to toggle highlighting on/off, and show current value.
-noremap ,hl :set hlsearch! hlsearch?<CR>
-
-" These are very similar keys. Typing 'a will jump to the line in the current
-" file marked with ma. However, `a will jump to the line and column marked
-" with ma.  It’s more useful in any case I can imagine, but it’s located way
-" off in the corner of the keyboard. The best way to handle this is just to
-" swap them: http://items.sjbach.com/319/configuring-vim-right
-nnoremap ' `
-nnoremap ` '
-
-" ============================
-" Tabularize - alignment
-" ============================
-map <silent> <leader>aa :Tabularize /
-map <silent> <leader>a= :Tabularize /=<CR>
-map <silent> <leader>a: :Tabularize /:\zs<CR>
+" nmap <silent> ,vr :so %<CR>
 
 " ============================
 " SplitJoin plugin
 " ============================
-nmap sj :SplitjoinSplit<cr>
-nmap sk :SplitjoinJoin<cr>
+nmap <Leader>ss :SplitjoinSplit<cr>
+nmap <Leader>sj :SplitjoinJoin<cr>
 
 " Get the current highlight group. Useful for then remapping the color
-map ,hi :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " FG:" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#")<CR>
+" map ,hi :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " FG:" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#")<CR>
 
 " ,hp = html preview
-map <silent> ,hp :!open -a Safari %<CR><CR>
+" map <silent> ,hp :!open -a Safari %<CR><CR>
 
-" imap uu _
-" imap hh =>
-" imap kk ->
-" imap aa @
-
-nnoremap <C-t>n :tabnew<CR>
 nnoremap <silent> <Leader>w= :wincmd =<CR>
-nnoremap <silent> <Leader>wr :NERDTreeToggle<CR>:wincmd r<CR>:NERDTreeToggle<CR>
-nnoremap <silent> <Leader>wR :NERDTreeToggle<CR>:wincmd R<CR>:NERDTreeToggle<CR>
-nnoremap <silent> <Leader>wK :NERDTreeToggle<CR>:wincmd K<CR>:NERDTreeToggle<CR>
-nnoremap <silent> <Leader>wJ :NERDTreeToggle<CR>:wincmd J<CR>:NERDTreeToggle<CR>
-nnoremap <silent> <Leader>wH :NERDTreeToggle<CR>:wincmd H<CR>:NERDTreeToggle<CR>
-nnoremap <silent> <Leader>wL :NERDTreeToggle<CR>:wincmd L<CR>:NERDTreeToggle<CR>
+
+nnoremap <silent> <Leader>wR :NERDTreeToggle<CR>:wincmd r<CR>:NERDTreeToggle<CR><C-w><RIGHT>
+nnoremap <silent> <Leader>wr :NERDTreeToggle<CR>:wincmd R<CR>:NERDTreeToggle<CR><C-w><RIGHT>
+nnoremap <silent> <Leader>wk :NERDTreeToggle<CR>:wincmd K<CR>:NERDTreeToggle<CR><C-w><RIGHT>
+nnoremap <silent> <Leader>wj :NERDTreeToggle<CR>:wincmd J<CR>:NERDTreeToggle<CR><C-w><RIGHT>
+nnoremap <silent> <Leader>wh :NERDTreeToggle<CR>:wincmd H<CR>:NERDTreeToggle<CR><C-w><RIGHT>
+nnoremap <silent> <Leader>wl :NERDTreeToggle<CR>:wincmd L<CR>:NERDTreeToggle<CR><C-w><RIGHT>
+nnoremap <silent> <Leader>wt :NERDTreeToggle<CR>:wincmd T<CR>:NERDTreeToggle<CR><C-w><RIGHT>
+nnoremap <silent> <Leader>wx :NERDTreeToggle<CR>:wincmd x<CR>:NERDTreeToggle<CR><C-w><RIGHT>
 
 "custom copy'n'paste
 ""copy the current visual selection to ~/.vbuf
