@@ -72,23 +72,14 @@ map ,` ysiw`
 " the first quote will autoclose so you'll get 'foo' and hitting <c-a> will
 " put the cursor right after the quote
 
-" Emacs move in insert mode
-inoremap <C-a> <C-O><S-i>
-inoremap <C-e> <End>
-inoremap <C-b> <LEFT>
-inoremap <C-f> <RIGHT>
-inoremap <C-h> <BACKSPACE>
-inoremap <C-d> <DELETE>
 
+" arrow move in command mode
 cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
-cnoremap <C-p> <UP>
-cnoremap <C-n> <DOWN>
-cnoremap <C-b> <LEFT>
-cnoremap <C-f> <RIGHT>
-cnoremap <C-h> <BACKSPACE>
-cnoremap <C-d> <DELETE>
-"imap <C-a> <esc>wa
+cnoremap <C-j> <UP>
+cnoremap <C-k> <DOWN>
+cnoremap <C-h> <LEFT>
+cnoremap <C-l> <RIGHT>
 
 " ,q to toggle quickfix window (where you have stuff like Ag)
 " ,oq to open it back up (rare)
@@ -101,14 +92,6 @@ cnoremap <C-d> <DELETE>
 nnoremap <silent> ,z :bp<CR>
 nnoremap <silent> ,x :bn<CR>
 
-" Zoom in
-map <silent> ,gz <C-w>o
-
-" Create window splits easier. The default
-" way is Ctrl-w,v and Ctrl-w,s. I remap
-" this to vv and ss
-nnoremap <silent> vv <C-w>v
-nnoremap <silent> ss <C-w>s
 
 nnoremap < <C-w>5<
 nnoremap > <C-w>5>
@@ -152,7 +135,9 @@ nmap <Leader>sj :SplitjoinJoin<cr>
 " map <silent> ,hp :!open -a Safari %<CR><CR>
 
 nnoremap <silent> <Leader>w= :wincmd =<CR>
-
+nnoremap <silent> <Leader>wo <C-w>o
+nnoremap <silent> <Leader>wv <C-w>v
+nnoremap <silent> <Leader>ws <C-w>s
 nnoremap <silent> <Leader>wR :NERDTreeToggle<CR>:wincmd r<CR>:NERDTreeToggle<CR><C-w><RIGHT>
 nnoremap <silent> <Leader>wr :NERDTreeToggle<CR>:wincmd R<CR>:NERDTreeToggle<CR><C-w><RIGHT>
 nnoremap <silent> <Leader>wk :NERDTreeToggle<CR>:wincmd K<CR>:NERDTreeToggle<CR><C-w><RIGHT>
@@ -162,13 +147,13 @@ nnoremap <silent> <Leader>wl :NERDTreeToggle<CR>:wincmd L<CR>:NERDTreeToggle<CR>
 nnoremap <silent> <Leader>wt :NERDTreeToggle<CR>:wincmd T<CR>:NERDTreeToggle<CR><C-w><RIGHT>
 nnoremap <silent> <Leader>wx :NERDTreeToggle<CR>:wincmd x<CR>:NERDTreeToggle<CR><C-w><RIGHT>
 
-"custom copy'n'paste
-""copy the current visual selection to ~/.vbuf
-vmap <silent> <leader>xy :w! ~/.vbuf<CR>
-"copy the current line to the buffer file if no visual selection
-nmap <silent> <leader>xy :.w! ~/.vbuf<CR>
-""paste the contents of the buffer file
-nmap <silent> <leader>xp :r ~/.vbuf<CR>
+" "custom copy'n'paste
+" ""copy the current visual selection to ~/.vbuf
+" vmap <silent> <leader>xy :w! ~/.vbuf<CR>
+" "copy the current line to the buffer file if no visual selection
+" nmap <silent> <leader>xy :.w! ~/.vbuf<CR>
+" ""paste the contents of the buffer file
+" nmap <silent> <leader>xp :r ~/.vbuf<CR>
 
 "Reselect visual block after indent/outdent 
 vnoremap < <gv
@@ -178,29 +163,24 @@ vnoremap > >gv
 nnoremap j gj
 nnoremap k gk
 
-"CtrlP 
-map <leader>t :CtrlP<CR>
-
+" arrow move in insert mode
+inoremap <C-a> <C-O><S-i>
+inoremap <C-e> <End>
 inoremap <expr> <c-j> pumvisible() ? "\<C-e>\<Down>" : "\<Down>"
 inoremap <expr> <c-k> pumvisible() ? "\<C-e>\<Up>" : "\<Up>"
-
-
-"to camel case
-nmap <silent> <leader>> ciw<Esc>:let @"=substitute(strtrans(@"), '[A-Z]\C', '_\L&', 'g')<CR>"0p
-"from camel case
-nmap <silent> <leader>< ciw<Esc>:let @"=substitute(strtrans(@"), '_\([a-z]\)\C', '\U\1', 'g')<CR>"0p
-
+inoremap <expr> <c-h> pumvisible() ? "\<C-e>\<Left>" : "\<Left>"
+inoremap <expr> <c-l> pumvisible() ? "\<C-e>\<Right>" : "\<Right>"
 
 "map for macro q
 "<Space> has been mapped for Sneak/EasyMotion
-nnoremap <Space><Space> @q
+" nnoremap <Space><Space> @q
 
 map <leader>ww :w<CR>
+map <leader>wa :wall<CR>
 map <leader>xx :x<CR>
-map <leader>qq :qa<CR>
+" map <leader>qq :qa<CR>
 
 "redraw
-nmap <leader>rd :redraw!<CR>
+" nmap <leader>rd :redraw!<CR>
 
-nnoremap <F8> :set wrap! wrap?<CR>
-imap <F8> <C-O><F8>
+nnoremap <Leader>sw :set wrap! wrap?<CR>
