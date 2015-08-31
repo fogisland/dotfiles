@@ -1,8 +1,8 @@
 "Bundle "othree/yajs.vim"
 Bundle 'sheerun/vim-polyglot'
 Bundle 'garbas/vim-snipmate.git'
-Bundle 'mattn/emmet-vim'
 Bundle 'honza/vim-snippets'
+Bundle 'mattn/emmet-vim'
 Bundle 'jtratner/vim-flavored-markdown.git'
 Bundle 'scrooloose/syntastic.git'
 Bundle 'nelstrom/vim-markdown-preview'
