@@ -1,9 +1,6 @@
 "Bundle "othree/yajs.vim"
 Bundle 'sheerun/vim-polyglot'
 Bundle 'garbas/vim-snipmate.git'
-"Completion for c, cpp, python, need compile with clang
-"I put it into vim/.vundles.local due to it is too heavy.
-"Bundle 'Valloric/YouCompleteMe'
 Bundle 'qianthinking/javacomplete'
 Bundle 'qianthinking/vim-android'
 Bundle 'mattn/emmet-vim'
