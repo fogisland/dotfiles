@@ -10,15 +10,6 @@
 " dashes are very common, and in position that require
 " a lot of hand movement. Vim to the rescue
 "
-" Now using the middle finger of either hand you can type
-" underscores with apple-k or apple-d, and add Shift
-" to type dashes
-imap <silent> <D-k> _
-imap <silent> <D-d> -
-imap <silent> <D-e> =
-
-map <D-ESC> :macaction selectNextWindow:<CR>
-map <D-S-ESC> :macaction selectPreviousWindow:<CR>
 
 " Change inside various enclosures with Cmd-" and Cmd-'
 " The f makes it find the enclosure so you don't have
@@ -44,10 +35,6 @@ autocmd FileType rspec map <buffer> <D-j> }
 autocmd FileType rspec map <buffer> <D-k> {
 autocmd FileType javascript map <buffer> <D-k> }
 autocmd FileType javascript map <buffer> <D-j> {
-
-" Command-/ to toggle comments
-map <D-/> :TComment<CR>
-imap <D-/> <Esc>:TComment<CR>i
 
 " Use numbers to pick the tab you want (like iTerm)
 map <silent> <D-1> :tabn 1<cr>
