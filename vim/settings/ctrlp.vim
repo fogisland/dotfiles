@@ -26,9 +26,9 @@ let g:ctrlp_switch_buffer = 0
 " it interferes with YankRing (paste, then hit ctrl-p)
 let g:ctrlp_map = ',ff'
 nnoremap <silent> ,ff :CtrlP<CR>
-
-" Additional mapping for buffer search
 nnoremap <silent> ,fb :CtrlPBuffer<cr>
+nnoremap <silent> <Leader>ft :CtrlPBufTag<CR>
+nnoremap <silent> <leader>fm :CtrlPMRU<CR>
 
 " Cmd-Shift-P to clear the cache or <F5> which I don't know where defined
 nnoremap <silent> <D-P> :ClearCtrlPCache<cr>
@@ -36,23 +36,18 @@ nnoremap <silent> <D-P> :ClearCtrlPCache<cr>
 " Idea from : http://www.charlietanksley.net/blog/blog/2011/10/18/vim-navigation-with-lustyexplorer-and-lustyjuggler/
 " Open CtrlP starting from a particular path, making it much
 " more likely to find the correct thing first. mnemonic 'jump to [something]'
-map ,ja :CtrlP app/assets<CR>
-map ,jm :CtrlP app/models<CR>
-map ,jc :CtrlP app/controllers<CR>
-map ,jv :CtrlP app/views<CR>
-map ,jh :CtrlP app/helpers<CR>
-map ,jl :CtrlP lib<CR>
-map ,jp :CtrlP public<CR>
-map ,js :CtrlP spec<CR>
-map ,jf :CtrlP fast_spec<CR>
-map ,jd :CtrlP db<CR>
-map ,jC :CtrlP config<CR>
-map ,jV :CtrlP vendor<CR>
-map ,jF :CtrlP factories<CR>
-map ,jT :CtrlP test<CR>
-
-"Cmd-Shift-(M)ethod - jump to a method (tag in current file)
-"Ctrl-m is not good - it overrides behavior of Enter
-nnoremap <silent> ,ft :CtrlPBufTag<CR>
-
-nnoremap <silent> <leader>fm :CtrlPMRU<CR>
+" map ,ja :CtrlP app/assets<CR>
+" map ,jm :CtrlP app/models<CR>
+" map ,jc :CtrlP app/controllers<CR>
+" map ,jv :CtrlP app/views<CR>
+" map ,jh :CtrlP app/helpers<CR>
+" map ,jl :CtrlP lib<CR>
+" map ,jp :CtrlP public<CR>
+" map ,js :CtrlP spec<CR>
+" map ,jf :CtrlP fast_spec<CR>
+" map ,jd :CtrlP db<CR>
+" map ,jC :CtrlP config<CR>
+" map ,jV :CtrlP vendor<CR>
+" map ,jF :CtrlP factories<CR>
+" map ,jT :CtrlP test<CR>
+"
