@@ -75,6 +75,8 @@ cnoremap <C-l> <RIGHT>
 
 map <leader>ww :w<CR>
 map <leader>wa :wall<CR>
+map <leader>qq :q<CR>
+map <leader>qa :qa<CR>
 
 nnoremap <Leader>sw :set wrap! wrap?<CR>
 nnoremap <Leader>sn :set nu! nu?<CR>
