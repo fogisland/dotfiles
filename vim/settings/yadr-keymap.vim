@@ -79,3 +79,4 @@ map <leader>wa :wall<CR>
 nnoremap <Leader>sw :set wrap! wrap?<CR>
 nnoremap <Leader>sn :set nu! nu?<CR>
 nnoremap <Leader>sp :set paste! paste?<CR>
+
