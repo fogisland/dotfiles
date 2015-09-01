@@ -18,33 +18,6 @@ endfunction
 nnoremap 0 ^
 nnoremap ^ 0
 
-" ,# Surround a word with #{ruby interpolation}
-map ,# ysiw#
-vmap ,# c#{<C-R>"}<ESC>
-" ," Surround a word with "quotes"
-map ," ysiw"
-vmap ," c"<C-R>""<ESC>
-" ,' Surround a word with 'single quotes'
-map ,' ysiw'
-vmap ,' c'<C-R>"'<ESC>
-" ,) or ,( Surround a word with (parens)
-" The difference is in whether a space is put in
-map ,( ysiw(
-map ,) ysiw)
-vmap ,( c( <C-R>" )<ESC>
-vmap ,) c(<C-R>")<ESC>
-" ,[ Surround a word with [brackets]
-map ,] ysiw]
-map ,[ ysiw[
-vmap ,[ c[ <C-R>" ]<ESC>
-vmap ,] c[<C-R>"]<ESC>
-" ,{ Surround a word with {braces}
-map ,} ysiw}
-map ,{ ysiw{
-vmap ,} c{ <C-R>" }<ESC>
-vmap ,{ c{<C-R>"}<ESC>
-map ,` ysiw`
-
 "Move back and forth through previous and next buffers
 "with ,z and ,x
 nnoremap <silent> ,z :bp<CR>
@@ -104,3 +77,5 @@ map <leader>ww :w<CR>
 map <leader>wa :wall<CR>
 
 nnoremap <Leader>sw :set wrap! wrap?<CR>
+nnoremap <Leader>sn :set nu! nu?<CR>
+nnoremap <Leader>sp :set paste! paste?<CR>
