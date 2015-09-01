@@ -1,2 +1,2 @@
-nnoremap <Leader>gs :Gsearch 
-nnoremap <Leader>gr :Greplace
+" nnoremap <Leader>gs :Gsearch 
+" nnoremap <Leader>gr :Greplace
