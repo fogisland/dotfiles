@@ -27,8 +27,8 @@ nmap <D-N> :NERDTreeToggle<CR>
 
 " move up/down quickly by using Cmd-j, Cmd-k
 " which will move us around by functions
-nnoremap <silent> <D-j> }
-nnoremap <silent> <D-k> {
+nnoremap  <D-j> }
+nnoremap  <D-k> {
 autocmd FileType ruby map <buffer> <D-j> ]m
 autocmd FileType ruby map <buffer> <D-k> [m
 autocmd FileType rspec map <buffer> <D-j> }
@@ -37,15 +37,15 @@ autocmd FileType javascript map <buffer> <D-k> }
 autocmd FileType javascript map <buffer> <D-j> {
 
 " Use numbers to pick the tab you want (like iTerm)
-map <silent> <D-1> :tabn 1<cr>
-map <silent> <D-2> :tabn 2<cr>
-map <silent> <D-3> :tabn 3<cr>
-map <silent> <D-4> :tabn 4<cr>
-map <silent> <D-5> :tabn 5<cr>
-map <silent> <D-6> :tabn 6<cr>
-map <silent> <D-7> :tabn 7<cr>
-map <silent> <D-8> :tabn 8<cr>
-map <silent> <D-9> :tabn 9<cr>
+map  <D-1> :tabn 1<cr>
+map  <D-2> :tabn 2<cr>
+map  <D-3> :tabn 3<cr>
+map  <D-4> :tabn 4<cr>
+map  <D-5> :tabn 5<cr>
+map  <D-6> :tabn 6<cr>
+map  <D-7> :tabn 7<cr>
+map  <D-8> :tabn 8<cr>
+map  <D-9> :tabn 9<cr>
 
 " Resize windows with arrow keys
 nnoremap <D-Up> <C-w>+

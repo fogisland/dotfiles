@@ -20,30 +20,30 @@ nnoremap ^ 0
 
 "Move back and forth through previous and next buffers
 "with ,z and ,x
-nnoremap <silent> ,z :bp<CR>
-nnoremap <silent> ,x :bn<CR>
+nnoremap  ,z :bp<CR>
+nnoremap  ,x :bn<CR>
 
 " copy current filename into system clipboard - mnemonic: (c)urrent(f)ilename
 " this is helpful to paste someone the path you're looking at
-nnoremap <silent> ,cf :let @* = expand("%:~")<CR>
-nnoremap <silent> ,cn :let @* = expand("%:t")<CR>
+nnoremap  ,cf :let @* = expand("%:~")<CR>
+nnoremap  ,cn :let @* = expand("%:t")<CR>
 
 "Clear current search highlight by double tapping //
-nmap <silent> // :nohlsearch<CR>
+nmap  // :nohlsearch<CR>
 
 " ABOUNT WINDOW
-nnoremap <silent> <Leader>w= :wincmd =<CR>
-nnoremap <silent> <Leader>wo <C-w>o
-nnoremap <silent> <Leader>wv <C-w>v
-nnoremap <silent> <Leader>ws <C-w>s
-nnoremap <silent> <Leader>wR :NERDTreeToggle<CR>:wincmd r<CR>:NERDTreeToggle<CR><C-w><RIGHT>
-nnoremap <silent> <Leader>wr :NERDTreeToggle<CR>:wincmd R<CR>:NERDTreeToggle<CR><C-w><RIGHT>
-nnoremap <silent> <Leader>wk :NERDTreeToggle<CR>:wincmd K<CR>:NERDTreeToggle<CR><C-w><RIGHT>
-nnoremap <silent> <Leader>wj :NERDTreeToggle<CR>:wincmd J<CR>:NERDTreeToggle<CR><C-w><RIGHT>
-nnoremap <silent> <Leader>wh :NERDTreeToggle<CR>:wincmd H<CR>:NERDTreeToggle<CR><C-w><RIGHT>
-nnoremap <silent> <Leader>wl :NERDTreeToggle<CR>:wincmd L<CR>:NERDTreeToggle<CR><C-w><RIGHT>
-nnoremap <silent> <Leader>wt :NERDTreeToggle<CR>:wincmd T<CR>:NERDTreeToggle<CR><C-w><RIGHT>
-nnoremap <silent> <Leader>wx :NERDTreeToggle<CR>:wincmd x<CR>:NERDTreeToggle<CR><C-w><RIGHT>
+nnoremap  <Leader>w= :wincmd =<CR>
+nnoremap  <Leader>wo <C-w>o
+nnoremap  <Leader>wv <C-w>v
+nnoremap  <Leader>ws <C-w>s
+nnoremap  <Leader>wR :NERDTreeToggle<CR>:wincmd r<CR>:NERDTreeToggle<CR><C-w><RIGHT>
+nnoremap  <Leader>wr :NERDTreeToggle<CR>:wincmd R<CR>:NERDTreeToggle<CR><C-w><RIGHT>
+nnoremap  <Leader>wk :NERDTreeToggle<CR>:wincmd K<CR>:NERDTreeToggle<CR><C-w><RIGHT>
+nnoremap  <Leader>wj :NERDTreeToggle<CR>:wincmd J<CR>:NERDTreeToggle<CR><C-w><RIGHT>
+nnoremap  <Leader>wh :NERDTreeToggle<CR>:wincmd H<CR>:NERDTreeToggle<CR><C-w><RIGHT>
+nnoremap  <Leader>wl :NERDTreeToggle<CR>:wincmd L<CR>:NERDTreeToggle<CR><C-w><RIGHT>
+nnoremap  <Leader>wt :NERDTreeToggle<CR>:wincmd T<CR>:NERDTreeToggle<CR><C-w><RIGHT>
+nnoremap  <Leader>wx :NERDTreeToggle<CR>:wincmd x<CR>:NERDTreeToggle<CR><C-w><RIGHT>
 nnoremap < <C-w>5<
 nnoremap > <C-w>5>
 nnoremap + <C-w>5+

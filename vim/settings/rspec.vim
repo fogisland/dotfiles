@@ -19,11 +19,11 @@ function! ChangePendingRspecToXit()
   endwhile
 endfunction
 
-nnoremap <silent> ,rxit :call ChangePendingRspecToXit()<cr>
+nnoremap  ,rxit :call ChangePendingRspecToXit()<cr>
 
 " insert a before { } block around a line
-nnoremap <silent> \bf ^ibefore { <esc>$a }
+nnoremap  \bf ^ibefore { <esc>$a }
 
 " insert a specify { } block around a line
-nnoremap <silent> \sp ^ispecify { <esc>$a }
+nnoremap  \sp ^ispecify { <esc>$a }
 
