@@ -1,1 +1,2 @@
-nnoremap <silent> <leader>tt :TagbarToggle<CR>
+nnoremap  <leader>tb :TagbarToggle<CR>
+let g:tagbar_sort = 0
