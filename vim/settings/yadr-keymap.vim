@@ -33,7 +33,7 @@ nmap  // :nohlsearch<CR>
 
 " ABOUNT WINDOW
 nnoremap  <Leader>w= :wincmd =<CR>
-nnoremap  <Leader>wo <C-w>o
+nnoremap  <Leader>wo :ZoomWin<CR>
 nnoremap  <Leader>wv <C-w>v
 nnoremap  <Leader>ws <C-w>s
 nnoremap  <Leader>wR :NERDTreeToggle<CR>:wincmd r<CR>:NERDTreeToggle<CR><C-w><RIGHT>
