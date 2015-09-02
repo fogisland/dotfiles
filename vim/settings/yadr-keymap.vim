@@ -73,11 +73,13 @@ cnoremap <C-k> <DOWN>
 cnoremap <C-h> <LEFT>
 cnoremap <C-l> <RIGHT>
 
+" TOP LEVEL CONTROL
 map <leader>ww :w<CR>
 map <leader>wa :wall<CR>
 map <leader>qq :q<CR>
 map <leader>qa :qa<CR>
 
+" QUICK SETTINGS
 nnoremap <Leader>sw :set wrap! wrap?<CR>
 nnoremap <Leader>sn :set nu! nu?<CR>
 nnoremap <Leader>sp :set paste! paste?<CR>
