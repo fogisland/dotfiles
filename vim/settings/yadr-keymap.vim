@@ -94,3 +94,4 @@ autocmd FileType ruby map <buffer> ]v ]m
 autocmd FileType ruby map <buffer> [V [M
 autocmd FileType ruby map <buffer> ]V ]M
 
+nnoremap <Leader>ct :checktime<CR>
