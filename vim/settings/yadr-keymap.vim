@@ -84,9 +84,13 @@ nnoremap <Leader>sw :set wrap! wrap?<CR>
 nnoremap <Leader>sn :set nu! nu?<CR>
 nnoremap <Leader>sp :set paste! paste?<CR>
 
-" REMAP MASSIVE RUBY MOTION KEY
+" REMAP MASSIVE RUBY MOTION key
 autocmd FileType ruby map <buffer> [c [[
 autocmd FileType ruby map <buffer> ]c ]]
 autocmd FileType ruby map <buffer> [C []
 autocmd FileType ruby map <buffer> ]C ][
+autocmd FileType ruby map <buffer> [v [m
+autocmd FileType ruby map <buffer> ]v ]m
+autocmd FileType ruby map <buffer> [V [M
+autocmd FileType ruby map <buffer> ]V ]M
 
