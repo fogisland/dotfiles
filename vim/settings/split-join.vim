@@ -1,2 +1,2 @@
-nmap <Leader>ss :SplitjoinSplit<cr>
-nmap <Leader>sj :SplitjoinJoin<cr>
+nmap <Leader>js :SplitjoinSplit<cr>
+nmap <Leader>jj :SplitjoinJoin<cr>
