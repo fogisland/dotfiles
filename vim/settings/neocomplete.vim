@@ -31,3 +31,6 @@ autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
 
+nnoremap <Leader>nce :NeoCompleteEnable<CR>
+nnoremap <Leader>ncd :NeoCompleteDisable<CR>
+
