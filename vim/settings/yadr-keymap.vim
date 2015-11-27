@@ -95,3 +95,15 @@ autocmd FileType ruby map <buffer> [V [M
 autocmd FileType ruby map <buffer> ]V ]M
 
 nnoremap <Leader>ct :checktime<CR>
+
+" jump to tab quickly
+nnoremap 1t 1gt<cr>
+nnoremap 2t 2gt<cr>
+nnoremap 3t 3gt<cr>
+nnoremap 4t 4gt<cr>
+nnoremap 5t 5gt<cr>
+nnoremap 6t 6gt<cr>
+nnoremap 7t 7gt<cr>
+nnoremap 8t 8gt<cr>
+nnoremap 9t 9gt<cr>
+
