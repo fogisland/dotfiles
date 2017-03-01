@@ -64,6 +64,8 @@ alias :q='exit'
 #alias zr='source ~/.zshrc'
 
 # Git Aliases
+alias gn='git number --column'
+alias ga='git number add'
 #alias gs='git status'
 #alias gstsh='git stash'
 #alias gst='git stash'
